@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BNBFarm — Investissements BNB</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>BNBFarm</h1>
+      <p>Investissements BNB — rendement 2% toutes les 5 minutes</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="auth" id="authBlock">
+      <h2>Connexion / Inscription</h2>
+      <input id="email" placeholder="Email" />
+      <input id="password" type="password" placeholder="Mot de passe" />
+      <div class="row">
+        <button id="signupBtn">S'inscrire</button>
+        <button id="loginBtn">Se connecter</button>
+      </div>
+      <small>Parrain (optionnel) : <input id="ref" placeholder="referrer id"/></small>
+    </section>
+
+    <section id="app" style="display:none">
+      <div class="card">
+        <h3>Adresse de dépôt</h3>
+        <p class="mono" id="depositAddress">0x84B1CeB4642F0a837526d85caCbcBE5F9B8764c0</p>
+        <p>Envoyez BNB à cette adresse puis copiez le txHash ci-dessous et signalez le dépôt.</p>
+      </div>
+
+      <div class="card">
+        <h3>Signaler dépôt</h3>
+        <input id="txHash" placeholder="Hash de transaction (0x...)" />
+        <button id="reportDeposit">Signaler dépôt</button>
+      </div>
+
+      <div class="card">
+        <h3>Retrait</h3>
+        <input id="withdrawTo" placeholder="Adresse BSC destination" />
+        <input id="withdrawAmount" placeholder="Montant en BNB" />
+        <button id="withdrawBtn">Demander retrait</button>
+      </div>
+
+      <div class="card">
+        <h3>Solde</h3>
+        <p><strong><span id="balance">0</span> BNB</strong></p>
+        <button id="refresh">Actualiser</button>
+      </div>
+
+      <div id="messages" class="messages"></div>
+      <button id="logout">Se déconnecter</button>
+    </section>
+  </main>
+
+<script src="main.js"></script>
+</body>
+</html>
